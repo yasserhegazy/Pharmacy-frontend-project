@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+:root{
+    --main-color: #F4F4F2;
+    --sub-color: #292f36;
+    --third-color: #4ECDC4;
+    --forth-color: #FF6B6B;
+}
+body{
+    height: 100vh;
+}
+section{
+    display: flex;
+}
+#left{
+    width: 60%;
+}
+h2{
+    color: var(--third-color);
+    font-weight: bolder;
+}
+#title{
+    padding-top: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#right{
+    width: 450px;
+    display: grid;
+    justify-content: center;
+}
+#first{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 45% 45%;
+    padding-left: 40px;
+    margin-right: 80px;
+}
+pre{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+#div{
+    width: 200px;
+    height: 130px;
+    border-radius: 15px;
+    background-color: var(--sub-color);
+    position: relative;
+    color: var(--main-color);
+}
+#div h3{
+    padding-top: 15px;
+    padding-left: 10px;
+}
+#div i{
+    font-size: 60px;
+    position: absolute;
+    top: 40px;
+    padding-left: 115px;
+}
+@media (max-width: 767px){
+    #left{
+        display: none;
+    }
+    #right{
+        width: 100vh;
+    }
+    #title{
+        
+        padding-top: 80px;
+        margin-left: 80px;
+    }
+    pre{
+        margin-top: 40px;
+    }
+
+}
+@media (min-width: 767px) and (max-width: 1000px) {
+    #left{
+        display: none;
+    }
+    #right{
+        width: 100vh;
+    }
+    #title{
+        padding-top: 80px;
+        margin-left: 60px;
+    }
+    pre{
+        font-size: 23px;
+        padding-left: 70px;
+        margin-top: 30px;
+    }
+    #div{
+        width: 300px;
+        height: 230px;
+        margin-left: 40px;
+    }
+    #div h3{
+        font-size: 40px;
+        padding-top: 30px;
+        padding-left: 20px;
+    }
+    #div i{
+        font-size: 90px;
+        position: absolute;
+        top: 90px;
+        padding-left: 160px;
+    }
+}

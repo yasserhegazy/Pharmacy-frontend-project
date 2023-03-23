@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+:root{
+    --main-color: #F4F4F2;
+    --sub-color: #292f36;
+    --third-color: #4ECDC4;
+    --forth-color: #FF6B6B;
+}
+body{
+  background: var(--main-color);
+}
+nav{
+  background: var(--sub-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+}
+nav .logo{
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+nav .nav-items{
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 40px;
+}
+nav .nav-items li{
+  list-style: none;
+  padding: 0 15px;
+}
+nav .nav-items li a{
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .nav-items li a:hover{
+  color: var(--forth-color);
+}
+nav form{
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  background: var(--sub-color);
+  min-width: 18%!important;
+  border-radius: 2px;
+  border: 1px solid var(--sub-color);
+}
+nav form .search-data{
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: var(--main-color);
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+}
+nav form button{
+  padding: 0 15px;
+  color: var(--main-color);
+  font-size: 17px;
+  background: var(--forth-color);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+nav form button:hover{
+  background:var(--forth-color);
+}
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon{
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: var(--main-color);
+  cursor: pointer;
+  display: none;
+}
+nav .menu-icon span,
+nav .cancel-icon,
+nav .search-icon{
+  display: none;
+}
+@media (max-width: 1245px) {
+  nav{
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 2;
+    text-align: center;
+  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: var(--sub-color);
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  nav .nav-items.active{
+    left: 0px;
+  }
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav-items li a{
+    font-size: 20px;
+  }
+  nav form{
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+  nav form.active{
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav form:before{
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #1e232b;
+    margin: -20px 0 0;
+  }
+  nav form:after{
+    position: absolute;
+    content: '';
+    height: 60px;
+    padding: 2px;
+    background: var(--sub-color);
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .search-icon,
+  nav .menu-icon span{
+    display: block;
+  }
+  nav .menu-icon span.hide,
+  nav .search-icon.hide{
+    display: none;
+  }
+  nav .cancel-icon.show{
+    display: block;
+  }
+}
+h2{
+    color: var(--sub-color);
+    font-size: xx-large;
+    font-weight: bold;
+}
+#hero{
+  height: 70vh;
+  width: 100%;
+  background-image: url(https://img.freepik.com/free-photo/abstract-blur-defocused-pharmacy-drug-store_1203-9459.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+#hero div h2{
+  padding-top:180px;
+  color: var(--sub-color);
+  font-size: xx-large;
+  text-shadow: 0 2px var(--main-color);
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.space{
+  margin: 10px 0;
+}
+nav .logo.space{
+  color: var(--forth-color);
+  padding: 0 5px 0 0;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .space{
+  margin: 10px 0;
+}
+#products{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 24% 24% 24% 24%;
+}
+#product{
+    width: fit-content;
+    width: 300px;
+    height: 250px; 
+    margin: 20px 0 20px 0;
+  }
+  #product div:first-of-type{
+    height: 200px;
+    background-color: var(--sub-color);
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    position: relative;
+  }
+  #product div:first-of-type a img{
+    height: 200px;
+    width: 200px;
+  }
+  #product div:last-of-type{
+    height: 50px;
+    background-color: var(--sub-color);
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+  #product div:last-of-type a{
+    text-decoration: none;
+    color: var(--third-color);
+  }
+  #cart{
+    font-size: larger;
+    display: block; 
+    position: absolute;
+    top: 20px;
+    right: 110px;
+    color: black;
+  }
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+  }
+  #profile{
+      width: 60%;
+      height: 100vh;
+      background-color:var(--main-color);
+      display: none;
+      border-radius: 40px;
+  }
+  #profile div:first-child{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      padding-top: 50px;
+  }
+  #profile div img{
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+  }
+  #profile div h3{
+    font-size: 25px;
+    font-weight: bolder;
+    color: var(--sub-color);
+  }
+  #links ul li a i{
+    display: inline;
+  }
+  #links ul li a{
+      text-decoration: none;
+      color: var(--sub-color);
+  }
+  #links{
+      padding-top: 70px;
+      padding-left: 50px;
+      display: grid;
+      justify-content: left;
+  }
+  #links ul li{
+      list-style: none;
+      font-size: 20px;
+      font-weight: bold;
+      padding-top: 4px;
+  }
+  #uploade{
+    padding: 44px;
+    display: none;
+  }
+  #uploade div img{
+    width: 70vh;
+    height: 90vh;
+  }
+  #uploade p span{
+    font-weight: bolder;
+  }
+  #uploade p{
+    font-size: 24px;
+  }
+  section input{
+    text-decoration: none;
+    display: block;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    color: var(--sub-color);
+    font-size: 20px;
+    background-color: var(--third-color);
+    border: 1px solid var(--third-color);
+    border-radius: 6px;
+    font-weight: bolder;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+  @media (max-width: 1000px){
+    nav .menu-icon,
+    nav .cancel-icon,
+    nav .search-icon{
+      margin: 0 20px;
+    }
+    nav form{
+      right: 30px;
+    }
+    #hero{
+      height: 500px;
+      font-size: large;
+    }
+    #products{
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 30% 30% 30%;
+    }
+    #product{
+      width: 230px;
+      height: 230px;
+    }
+    #product div:first-of-type{
+      height: 180px;
+    }
+    #product div:first-of-type a img{
+      height: 190px;
+      width: 150px;
+    }
+    #product div:last-of-type{
+      height: 50px;
+      font-size: small;
+    }
+    #cart{
+      top: 15px;
+      right: 60px;
+    }
+    .container{
+      padding-top: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #profile{
+      width: 800px;
+      height: 600px;
+    }
+    #links{
+      padding-left: 40px;
+      padding-top: 10px;
+    }
+  }
+  
+    #progressbar-1 {
+    color: #455A64;
+    }
+    
+    #progressbar-1 li {
+    list-style-type: none;
+    font-size: 13px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    }
+    
+    #progressbar-1 #step1:before {
+    content: "1";
+    color: #fff;
+    width: 29px;
+    margin-left: 22px;
+    padding-left: 11px;
+    }
+    
+    #progressbar-1 #step2:before {
+    content: "2";
+    color: #fff;
+    width: 29px;
+    }
+    
+    #progressbar-1 #step3:before {
+    content: "3";
+    color: var(--main-color);
+    width: 29px;
+    margin-right: 22px;
+    text-align: center;
+    }
+    
+    #progressbar-1 li:before {
+    line-height: 29px;
+    display: block;
+    font-size: 12px;
+    background: var(--sub-color);
+    border-radius: 50%;
+    margin: auto;
+    }
+    
+    #progressbar-1 li:after {
+    content: '';
+    width: 121%;
+    height: 2px;
+    background:var(--sub-color);
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 15px;
+    z-index: -1;
+    }
+    #myorder{
+      display: none;
+    }
+    #progressbar-1 li:nth-child(2):after {
+    left: 50%
+    }
+    
+    #progressbar-1 li:nth-child(1):after {
+    left: 25%;
+    width: 121%
+    }
+    
+    #progressbar-1 li:nth-child(3):after {
+    left: 30%;
+    width: 50%;
+    }
+    
+    #progressbar-1 li.active:before,
+    #progressbar-1 li.active:after {
+    background: #1266f1;
+    }
+    
+    .card-stepper {
+    z-index: 0
+    }
+    @media screen and (max-width: 767px){
+      nav .menu-icon,
+      nav .cancel-icon,
+      nav .search-icon{
+        margin: 0 10px;
+        font-size: 16px;
+      }
+      #hero{
+        height: 500px;
+        font-size: large;
+      }
+      #products{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 45% 45%;
+      }
+      #product{
+        width: 230px;
+        height: 230px;
+      }
+      #product div:first-of-type{
+        height: 180px;
+      }
+      #product div:first-of-type a img{
+        height: 190px;
+        width: 150px;
+      }
+      #product div:last-of-type{
+        height: 50px;
+        font-size: small;
+      }
+      #cart{
+        top: 17px;
+        right: 54px;
+      }
+      .container{
+        padding-top: 100px;
+      }
+      #links{
+        padding-left: 20px;
+      }
+      #uploade p{
+        font-size: 16px;
+      }
+      #uploade div img{
+        width: 90%;
+        height: 50%;
+      }
+      #myorder{
+        position: relative;
+        margin: 0;
+      }
+    }
+  
