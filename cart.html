@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/utilities.css">
 </head>
 <body>
   <header>
@@ -20,9 +21,10 @@
     </div>
     <div class="nav-items">
         <li><a href="home.html">Home</a></li>
-        <li><a href="catagories.html">Catagories</a></li>
-        <li id="clk1"><a href="#">Profile</a></li>
-        <li id="click"><a href="#">Uploade</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="upload.html">Upload</a></li>
+        <li><a href="cart.html">Cart</a></li>
         <li><a href="login.html">Login</a></li>
         <li><a href="call.html">Contact</a></li>
     </div>
@@ -42,10 +44,10 @@
     <br>
     <br>
 
-      <center><h2>Cart</h2></center>
+      <div class="text-center"><h2>Cart</h2></div>
         <div id="element">
         <div>
-          <img src="image/aspirin.png" alt="" style="height: 100px; width: 150px;">
+          <img src="image/aspirin.png" alt="Aspirin 81mg" style="height: 100px; width: 150px;">
         </div>
         <div id="information">
             <h4>Aspirin</h4>
@@ -56,15 +58,14 @@
             <button id="plus">+</button>
             <span id="results">0</span>
             <button id="minus">-</button>
-            </span>
         </div>
     </div>
     <div id="element">
       <div>
-        <img src="image/image5.png" alt="" style="height: 100px; width: 150px;">
+        <img src="image/image5.png" alt="Aspirin 70mg" style="height: 100px; width: 150px;">
       </div>
       <div id="information">
-          <h4>Apirin</h4>
+          <h4>Aspirin</h4>
           <h6>70 mg</h6>
           <h6>30$</h6>
       </div>
@@ -72,12 +73,11 @@
           <button id="plus">+</button>
           <span id="results">0</span>
           <button id="minus">-</button>
-          </span>
       </div>
   </div>
   <div id="element">
     <div>
-      <img src="image/image6.png" alt="" style="height: 100px; width: 150px;">
+      <img src="image/image6.png" alt="Diruex 92mg" style="height: 100px; width: 150px;">
     </div>
     <div id="information">
         <h4>Diruex</h4>
@@ -88,17 +88,17 @@
         <button id="plus">+</button>
         <span id="results">0</span>
         <button id="minus">-</button>
-        </span>
     </div>
 </div>
-<div>
-  <div>
-
-  </div>
-  <center><input type="button" value="Add to cart" ></center>
+<div style="margin-top: 30px; padding: 20px;">
+    <center>
+        <h3 id="cart-total">Total: $0.00</h3>
+        <br>
+        <input type="button" value="Proceed to Checkout">
+    </center>
 </div>
       </section>
-      <script src="JS/main1.js">
-      </script>
+      <script src="JS/navigation.js"></script>
+      <script src="JS/cart.js"></script>
 </body>
 </html>

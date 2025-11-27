@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Product</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="menu-icon">
+           <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+           Pharmacy
+        </div>
+        <div class="nav-items">
+           <li><a href="home.html">Home</a></li>
+           <li><a href="categories.html">Categories</a></li>
+           <li><a href="profile.html">Profile</a></li>
+           <li><a href="cart.html">Cart</a></li>
+           <li><a href="login.html">Login</a></li>
+           <li><a href="call.html">Contact</a></li>
+        </div>
+        <div class="search-icon">
+           <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+           <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+           <input type="search" class="search-data" placeholder="Search" required>
+           <button type="submit" class="fas fa-search"></button>
+        </form>
+        </nav>
+    </header>
+
+    <div class="upload-container">
+        <div class="upload-card">
+            <h2>Upload New Product</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                
+                <div class="form-group">
+                    <label for="productName"><i class="fa-solid fa-pills"></i> Product Name</label>
+                    <input type="text" id="productName" name="productName" placeholder="Enter product name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productCategory"><i class="fa-solid fa-list"></i> Category</label>
+                    <select id="productCategory" name="productCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="pain-relief">Pain Relief</option>
+                        <option value="cold-flu">Cold & Flu</option>
+                        <option value="vitamins">Vitamins & Supplements</option>
+                        <option value="antibiotics">Antibiotics</option>
+                        <option value="skin-care">Skin Care</option>
+                        <option value="digestive">Digestive Health</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="productPrice"><i class="fa-solid fa-dollar-sign"></i> Price ($)</label>
+                    <input type="number" id="productPrice" name="productPrice" placeholder="0.00" step="0.01" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productDosage"><i class="fa-solid fa-prescription-bottle"></i> Dosage</label>
+                    <input type="text" id="productDosage" name="productDosage" placeholder="e.g., 500mg, 10ml" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productDescription"><i class="fa-solid fa-align-left"></i> Description</label>
+                    <textarea id="productDescription" name="productDescription" rows="4" placeholder="Enter product description, usage, and warnings" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="productImage"><i class="fa-solid fa-image"></i> Product Image</label>
+                    <div class="file-upload">
+                        <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                        <label for="productImage" class="file-label">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <span>Choose Image</span>
+                        </label>
+                        <span id="fileName">No file chosen</span>
+                    </div>
+                    <div id="imagePreview"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="productStock"><i class="fa-solid fa-boxes-stacked"></i> Stock Quantity</label>
+                    <input type="number" id="productStock" name="productStock" placeholder="0" min="0" required>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="prescriptionRequired" name="prescriptionRequired">
+                        <span><i class="fa-solid fa-file-prescription"></i> Prescription Required</span>
+                    </label>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-upload"></i> Upload Product
+                    </button>
+                    <button type="reset" class="btn-reset">
+                        <i class="fa-solid fa-rotate-left"></i> Reset
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/api.js"></script>
+    <script src="JS/navigation.js"></script>
+    <script src="JS/upload.js"></script>
+</body>
+</html>
