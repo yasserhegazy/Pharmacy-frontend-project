@@ -16,27 +16,38 @@ body{
     background-color: var(--main-color);
 }
 
+section{
+    text-align: center;
+}
+
 section h3{
     font-weight: bolder;
     font-size: 30px;
     color: var(--third-color);
 }
+
+section a:not(#login):not(.fa-brands){
+    text-decoration: none;
+    color: var(--sub-color);
+    font-size: 16px;
+}
+
 .input{
     text-decoration: none;
     display: block;
     height: 50px;
     width: 300px;
-    margin: 12px 0;
+    margin: 12px auto;
     text-align: left;
     color: var(--main-color);
     font-size: 16px;
-    margin: auto;
     padding: 0 15px;
     border: 1px solid var(--third-color);
     border-radius: 6px;
     text-indent: 6px;
     background-color: var(--sub-color);
 }
+
 #login{
     text-decoration: none;
     display: block;
@@ -51,10 +62,13 @@ section h3{
     font-weight: bolder;
     padding: 10px 15px;
     text-transform: uppercase;
+    margin: 0 auto;
 }
+
 section div a{
     font-size: xx-large;
     color: var(--sub-color);
+    margin: 0 10px;
 }
 .radio{
     display: inline-block;
